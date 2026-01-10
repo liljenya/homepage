@@ -28,6 +28,7 @@ body {
     display: flex;
     transform: skewY(7deg) translateY(150px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    gap: 50px;
 }
 
 .header-photo {
@@ -42,6 +43,7 @@ body {
     width: 100%;
     height: 550px;
     object-fit: cover;
+    
 }
 
 .profile-name {
@@ -153,7 +155,7 @@ main {
     margin: 40px auto;
 }
 
-main h3{
+main h3 {
     font-size: 32px;
     padding-bottom: 25px;
 }
@@ -196,4 +198,196 @@ main h3{
     font-size: 16px;
     line-height: 1.4;
     padding: 0 0 0 25px;
+}
+
+@media (max-width: 1024px) {
+
+    .header-links {
+        display: none;
+    }
+
+    .section {
+        padding: 120px 20px 60px;
+    }
+
+    .container {
+        background: white;
+        max-width: 720px;
+        padding: 40px;
+    }
+
+    .tablet-photo {
+        float: left;
+        width: 260px;
+        height: 320px;
+        margin: -100px 30px 20px -100px;
+    }
+
+    .tablet-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-name {
+        position: absolute;
+        top: -20px;
+        left: 200px;
+        font-size: 36px;
+        font-weight: 600;
+        color: white;
+        padding: 8px 14px;
+        white-space: nowrap;
+    }
+
+    .header-text {
+        position: relative;
+        padding: 30px;
+    }
+
+    .header-text h2 {
+        font-size: 32px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 0 25px 100px 25px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-photo {
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .header-text {
+        padding: 0;
+    }
+
+    .tablet-photo {
+        width: 100%;
+        height: 420px;
+        margin: 0;
+        position: relative;
+    }
+
+    .tablet-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .profile-name {
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 56px;
+        padding: 8px 16px;
+        white-space: nowrap;
+    }
+
+    .header-text h2 {
+        font-size: 28px;
+        padding: 25px 20px 10px;
+    }
+
+    .header-text p {
+        font-size: 17px;
+        padding: 0 20px 30px;
+    }
+
+    .header-links {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    main {
+        padding: 0 20px 80px;
+    }
+
+    main h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 0; 
+        gap: 0;
+        width: 100vw; 
+        overflow: hidden;
+    }
+
+    .footer-photo {
+        margin: 0;
+        width: 100%;
+    }
+    
+
+    .footer-photo img {
+        width: 100%; 
+        height: auto; 
+        display: block;
+    }
+
+    .footer-content {
+        max-width: 100%; 
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+
+    .footer-content h4 {
+        text-align: center;
+        font-size: 58px;
+    }
+
+    .footer-content p,
+    .contacts p {
+        text-align: center;
+        font-size: 37px;
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer-links img {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.2s ease;
+    }
+
+    .footer-links img:hover {
+        transform: scale(1.1);
+    }
 }
